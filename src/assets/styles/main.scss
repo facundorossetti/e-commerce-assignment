@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './variables.scss';
+@import './transitions.scss';
+
+html {
+  font-size: 16px;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  #app .router-view {
+    @apply min-h-screen overflow-x-hidden max-w-7xl flex md:justify-start items-center mx-auto;
+    padding: $max-header-height 16px;
+  }
+}
